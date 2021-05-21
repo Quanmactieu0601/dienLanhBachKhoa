@@ -20,6 +20,11 @@ public class UserService {
 
     public User addUser(User user){
         user.setUserCode(UUID.randomUUID().toString());
+        //hash password và chuyển về Base64.String()
+
+
+
+
         return userRepo.save(user);
     }
 
