@@ -9,9 +9,9 @@ import java.util.Optional;
 public interface HoatDongRepo extends JpaRepository<HoatDong,Long> {
     List<HoatDong> findHoatDongByIdHoaDon(String idHoaDon);
 
-    List<HoatDong> findHoatDongByIDichVu(String idDichvu);
+    List<HoatDong> findHoatDongByIdDichVu(String idDichvu);
 
-    Optional<HoatDong> findHoatDongByIDHoatDong(Long idHoatDong);
+    Optional<HoatDong> findHoatDongByIdHoatDong(Long idHoatDong);
 
     void deleteByIdHoatDong(Long idHoatDong);
 }

@@ -27,11 +27,11 @@ public class HoatDongService {
     }
 
     public List<HoatDong> findHoatDongByIdDichVu(String idDichvu){
-        return hoatDongRepo.findHoatDongByIDichVu(idDichvu);
+        return hoatDongRepo.findHoatDongByIdDichVu(idDichvu);
     }
 
-    public HoatDong findHoatDongByIdHoatDong(Long idHoatDong){
-        return hoatDongRepo.findHoatDongByIDHoatDong(idHoatDong).orElseThrow(()-> new HoatDongNotFoundException("Not Found hoatDong with id "+ idHoatDong));
+    public HoatDong findHoatDongByidHoatDong(Long idHoatDong){
+        return hoatDongRepo.findHoatDongByIdHoatDong(idHoatDong).orElseThrow(()-> new HoatDongNotFoundException("Not Found hoatDong with id "+ idHoatDong));
     }
 
     public HoatDong addHoatDong(HoatDong hoatDong){

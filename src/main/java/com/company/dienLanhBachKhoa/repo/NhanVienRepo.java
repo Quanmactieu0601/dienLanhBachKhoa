@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface NhanVienRepo extends JpaRepository<NhanVien,String> {
-    Optional<NhanVien> findNhanVienById(String id);
+    Optional<NhanVien> findNhanVienByIdNhanVien(String id);
 
-    void deleteNhanVienById(String id);
+    void deleteNhanVienByIdNhanVien(String id);
 }

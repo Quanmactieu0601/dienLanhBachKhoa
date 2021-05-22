@@ -26,9 +26,9 @@ public class NhanVienResouce {
         return new ResponseEntity<>(nhanViens, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{id}")
-    public ResponseEntity<NhanVien> findNhanVienById(@PathVariable("id") String id){
-        NhanVien nhanVien = nhanVienService.findNhanVienById(id);
+    @GetMapping("/find/{idNhanVien}")
+    public ResponseEntity<NhanVien> findNhanVienById(@PathVariable("idNhanVien") String idNhanVien){
+        NhanVien nhanVien = nhanVienService.findNhanVienByIdNhanVien(idNhanVien);
         return new ResponseEntity<>(nhanVien,HttpStatus.OK);
     }
 
@@ -44,9 +44,9 @@ public class NhanVienResouce {
         return  new ResponseEntity<>(updateNhanVien,HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteNhanVienById(@PathVariable("id") String id){
-        nhanVienService.deleteNhanVienById(id);
+    @DeleteMapping("/delete/{idNhanVien}")
+    public ResponseEntity<?> deleteNhanVienById(@PathVariable("idNhanVien") String idNhanVien){
+        nhanVienService.deleteNhanVienByIdNhanVien(idNhanVien);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

@@ -22,8 +22,8 @@ public class NhanVienService {
         return nhanVienRepo.findAll();
     }
 
-    public NhanVien findNhanVienById(String id){
-        return nhanVienRepo.findNhanVienById(id).orElseThrow( () -> new NhanVienNotFoundException("Not found nhanVien with id "+id));
+    public NhanVien findNhanVienByIdNhanVien(String idNhanVien){
+        return nhanVienRepo.findNhanVienByIdNhanVien(idNhanVien).orElseThrow( () -> new NhanVienNotFoundException("Not found nhanVien with id "+idNhanVien));
     }
 
     public NhanVien addNhanVien(NhanVien nhanVien){
@@ -35,8 +35,8 @@ public class NhanVienService {
     }
 
     @Transactional
-    public void deleteNhanVienById(String id){
-        nhanVienRepo.deleteNhanVienById(id);
+    public void deleteNhanVienByIdNhanVien(String idNhanVien){
+        nhanVienRepo.deleteNhanVienByIdNhanVien(idNhanVien);
     }
 
 

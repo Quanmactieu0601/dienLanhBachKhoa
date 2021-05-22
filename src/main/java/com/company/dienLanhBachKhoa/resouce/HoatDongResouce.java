@@ -36,8 +36,8 @@ public class HoatDongResouce {
     }
 
     @GetMapping("/find/{idHoatDong}")
-    public ResponseEntity<HoatDong> findHoatDongByIdHoatDong(@PathVariable("idHoatDong") Long idHoatDong){
-        HoatDong hoatDong = hoatDongService.findHoatDongByIdHoatDong(idHoatDong);
+    public ResponseEntity<HoatDong> findHoatDongByidHoatDong(@PathVariable("idHoatDong") Long idHoatDong){
+        HoatDong hoatDong = hoatDongService.findHoatDongByidHoatDong(idHoatDong);
         return new ResponseEntity<>(hoatDong, HttpStatus.OK);
     }
 
@@ -47,14 +47,14 @@ public class HoatDongResouce {
         return new ResponseEntity<>(newHoatDong, HttpStatus.CREATED);
     }
 
-    @PostMapping("/add")
+    @PutMapping("/add")
     public ResponseEntity<HoatDong> updateHoatDong(HoatDong hoatDong){
         HoatDong updateHoatDong = hoatDongService.updateHoatDong(hoatDong);
         return new ResponseEntity<>(updateHoatDong, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/delete/{idHoatDong}")
-    public ResponseEntity<?> deleteHoatDongByIdHoatDong(@PathVariable("idHoatDon") Long idHoatDong){
+    public ResponseEntity<?> deleteHoatDongByidHoatDong(@PathVariable("idHoatDon") Long idHoatDong){
         hoatDongService.deleteHoatDongByIdHoatDong(idHoatDong);
         return new ResponseEntity<>(HttpStatus.OK);
     }
