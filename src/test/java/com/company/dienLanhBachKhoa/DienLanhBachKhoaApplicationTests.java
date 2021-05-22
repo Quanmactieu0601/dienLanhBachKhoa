@@ -1,4 +1,4 @@
-package com.cpmpany.dienLanhBachKhoa;
+package com.company.dienLanhBachKhoa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,8 +1,7 @@
-package com.cpmpany.dienLanhBachKhoa.resouce;
+package com.company.dienLanhBachKhoa.resouce;
 
-import com.cpmpany.dienLanhBachKhoa.model.LichHen;
-import com.cpmpany.dienLanhBachKhoa.model.User;
-import com.cpmpany.dienLanhBachKhoa.service.LichHenService;
+import com.company.dienLanhBachKhoa.model.LichHen;
+import com.company.dienLanhBachKhoa.service.LichHenService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,13 +1,14 @@
-package com.cpmpany.dienLanhBachKhoa.service;
+package com.company.dienLanhBachKhoa.service;
 
 
-import com.cpmpany.dienLanhBachKhoa.model.LichHen;
-import com.cpmpany.dienLanhBachKhoa.repo.LichHenRepo;
+import com.company.dienLanhBachKhoa.exception.LichHenNotFoundException;
+import com.company.dienLanhBachKhoa.exception.UserNotfoundException;
+import com.company.dienLanhBachKhoa.model.LichHen;
+import com.company.dienLanhBachKhoa.repo.LichHenRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class LichHenService {
@@ -36,6 +37,10 @@ public class LichHenService {
 
     public List<LichHen> findLichHenByHoanThanh(boolean hoanThanh){
         return lichHenRepo.findLichHenByHoanThanh(hoanThanh);
+    }
+
+    public LichHen findLichHenByIdLichHen(String idLichHen){
+        return lichHenRepo.findLichHenByIdLichHen(idLichHen).orElseThrow(() -> new LichHenNotFoundException("Lich hen không tồn tại"));
     }
 
 

@@ -1,6 +1,6 @@
-package com.cpmpany.dienLanhBachKhoa.repo;
+package com.company.dienLanhBachKhoa.repo;
 
-import com.cpmpany.dienLanhBachKhoa.model.User;
+import com.company.dienLanhBachKhoa.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

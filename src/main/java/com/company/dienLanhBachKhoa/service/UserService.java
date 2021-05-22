@@ -1,8 +1,8 @@
-package com.cpmpany.dienLanhBachKhoa.service;
+package com.company.dienLanhBachKhoa.service;
 
-import com.cpmpany.dienLanhBachKhoa.exception.UserNotfoundException;
-import com.cpmpany.dienLanhBachKhoa.model.User;
-import com.cpmpany.dienLanhBachKhoa.repo.UserRepo;
+import com.company.dienLanhBachKhoa.exception.UserNotfoundException;
+import com.company.dienLanhBachKhoa.model.User;
+import com.company.dienLanhBachKhoa.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

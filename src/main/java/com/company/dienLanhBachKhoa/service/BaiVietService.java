@@ -1,8 +1,8 @@
-package com.cpmpany.dienLanhBachKhoa.service;
+package com.company.dienLanhBachKhoa.service;
 
-import com.cpmpany.dienLanhBachKhoa.exception.BaiVietNotFoundException;
-import com.cpmpany.dienLanhBachKhoa.model.BaiViet;
-import com.cpmpany.dienLanhBachKhoa.repo.BaiVietRepo;
+import com.company.dienLanhBachKhoa.model.BaiViet;
+import com.company.dienLanhBachKhoa.repo.BaiVietRepo;
+import com.company.dienLanhBachKhoa.exception.BaiVietNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

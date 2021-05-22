@@ -1,4 +1,4 @@
-package com.cpmpany.dienLanhBachKhoa.model;
+package com.company.dienLanhBachKhoa.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

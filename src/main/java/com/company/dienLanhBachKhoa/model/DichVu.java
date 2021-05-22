@@ -1,4 +1,4 @@
-package com.cpmpany.dienLanhBachKhoa.model;
+package com.company.dienLanhBachKhoa.model;
 
 import javax.persistence.*;
 
@@ -9,6 +9,7 @@ public class DichVu {
     @Column(nullable = false, updatable = false)
     private String idDichVu;
     private String tenDichVu;
+    private String theLoai;
     private String donViTinh;
     private String donGia;
 
@@ -16,9 +17,10 @@ public class DichVu {
 
     }
 
-    public DichVu(String idDichVu, String tenDichVu, String donViTinh , String donGia){
+    public DichVu(String idDichVu, String tenDichVu,String theLoai, String donViTinh , String donGia){
         this.idDichVu = idDichVu;
         this.tenDichVu = tenDichVu;
+        this.theLoai = theLoai;
         this.donViTinh = donViTinh;
         this.donGia = donGia;
     }
@@ -55,10 +57,19 @@ public class DichVu {
         this.donGia = donGia;
     }
 
+    public String getTheLoai() {
+        return theLoai;
+    }
+
+    public void setTheLoai(String theLoai) {
+        this.theLoai = theLoai;
+    }
+
     public String toString(){
         return "dichVu{" +
                 "idDichVu='"+ idDichVu +'\'' +
                 "tenDichVu='" + tenDichVu +'\''+
+                "theLoai='" +theLoai +'\''+
                 "donViTinh='" + donViTinh +'\''+
                 "donGia='" + donGia +'\''+
                 '}';

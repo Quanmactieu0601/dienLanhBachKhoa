@@ -1,6 +1,6 @@
-package com.cpmpany.dienLanhBachKhoa.repo;
+package com.company.dienLanhBachKhoa.repo;
 
-import com.cpmpany.dienLanhBachKhoa.model.LichHen;
+import com.company.dienLanhBachKhoa.model.LichHen;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -16,4 +16,6 @@ public interface LichHenRepo extends JpaRepository<LichHen,String> {
     List<LichHen> findLichHenByIdDichVu(String idDichVu);
 
     List<LichHen> findLichHenByHoanThanh(boolean hoanThanh);
+
+    Optional<LichHen> findLichHenByIdLichHen(String idLichHen);
 }

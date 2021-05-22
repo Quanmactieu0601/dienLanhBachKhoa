@@ -1,4 +1,4 @@
-package com.cpmpany.dienLanhBachKhoa.exception;
+package com.company.dienLanhBachKhoa.exception;
 
 public class UserNotfoundException extends RuntimeException{
     public UserNotfoundException(String message) {

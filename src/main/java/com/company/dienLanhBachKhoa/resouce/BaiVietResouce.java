@@ -1,14 +1,11 @@
-package com.cpmpany.dienLanhBachKhoa.resouce;
+package com.company.dienLanhBachKhoa.resouce;
 
-import com.cpmpany.dienLanhBachKhoa.model.BaiViet;
-import com.cpmpany.dienLanhBachKhoa.model.BaiViet;
-import com.cpmpany.dienLanhBachKhoa.repo.BaiVietRepo;
-import com.cpmpany.dienLanhBachKhoa.service.BaiVietService;
+import com.company.dienLanhBachKhoa.model.BaiViet;
+import com.company.dienLanhBachKhoa.service.BaiVietService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.List;
 
