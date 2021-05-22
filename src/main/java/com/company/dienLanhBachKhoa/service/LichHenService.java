@@ -7,6 +7,7 @@ import com.company.dienLanhBachKhoa.model.LichHen;
 import com.company.dienLanhBachKhoa.repo.LichHenRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -47,7 +48,7 @@ public class LichHenService {
     public LichHen updateLichHen(LichHen lichHen) {
         return lichHenRepo.save(lichHen);
     }
-
+    @Transactional
     public void deleteLichHenByIdLichHen(String idLichHen){
         lichHenRepo.deleteLichHenByIdLichHen(idLichHen);
     }

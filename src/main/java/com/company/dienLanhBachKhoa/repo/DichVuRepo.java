@@ -5,8 +5,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface DichVuRepo extends JpaRepository<DichVu,String> {
+public interface DichVuRepo extends JpaRepository< DichVu, String> {
     List<DichVu> findDichVuByTheLoai(String theLoai);
 
-    void deleteDichVu(String idDichVu);
+
+
 }

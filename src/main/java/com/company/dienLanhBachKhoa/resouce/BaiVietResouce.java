@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Resource
+@RestController
 @RequestMapping("/baiViet")
 public class BaiVietResouce {
     private final BaiVietService baiVietService;
@@ -49,8 +49,8 @@ public class BaiVietResouce {
         return new ResponseEntity<>(updateBaiViet, HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete")
-    public ResponseEntity<BaiViet> deleteBaiViet(@PathVariable("id") String idBaiViet){
+    @DeleteMapping("/delete/{idbaiViet}")
+    public ResponseEntity<BaiViet> deleteBaiViet(@PathVariable("idBaiViet") String idBaiViet){
         baiVietService.deleteBaiViet(idBaiViet);
         return new ResponseEntity<>(HttpStatus.OK);
     }

@@ -11,7 +11,7 @@ public class BaiViet {
     @Autowired
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    private String idBaiviet;
+    private String idBaiViet;
     private String theLoai;
     private String tieuDe;
     private String tomTat;
@@ -22,18 +22,18 @@ public class BaiViet {
     public BaiViet(){}
 
     public BaiViet( String idBaiviet,String tieuDe,String tomTat,String noiDungUrl){
-        this.idBaiviet=idBaiviet;
+        this.idBaiViet=idBaiviet;
         this.tieuDe = tieuDe;
         this.tomTat = tomTat;
         this.noiDungUrl = noiDungUrl;
     }
 
-    public String getMaBaiviet() {
-        return idBaiviet;
+    public String getIdBaiviet() {
+        return idBaiViet;
     }
 
-    public void setMaBaiviet(String idBaiviet) {
-        this.idBaiviet = idBaiviet;
+    public void setIdBaiviet(String idBaiviet) {
+        this.idBaiViet = idBaiviet;
     }
 
     public String getTieuDe() {
@@ -70,7 +70,7 @@ public class BaiViet {
 
     public String toString(){
         return "baiViet{" +
-                "maBaiViet='" + idBaiviet + '\''+
+                "maBaiViet='" + idBaiViet + '\''+
                 "theLoai='" + theLoai +'\''+
                 "tieuDe='"+ tieuDe + '\'' +
                 "tomTat='" + tomTat +'\'' +

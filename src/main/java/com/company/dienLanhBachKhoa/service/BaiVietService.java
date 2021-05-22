@@ -5,6 +5,7 @@ import com.company.dienLanhBachKhoa.repo.BaiVietRepo;
 import com.company.dienLanhBachKhoa.exception.BaiVietNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class BaiVietService {
     public BaiViet updateBaiViet(BaiViet baiViet){
         return baiVietRepo.save(baiViet);
     }
-
+    @Transactional
     public void deleteBaiViet(String idBaiViet){
         baiVietRepo.deleteBaiVietByIdBaiViet(idBaiViet);
     }

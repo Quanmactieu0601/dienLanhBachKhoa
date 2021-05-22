@@ -3,9 +3,10 @@ package com.company.dienLanhBachKhoa.service;
 import com.company.dienLanhBachKhoa.model.DichVu;
 import com.company.dienLanhBachKhoa.repo.DichVuRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class DichVuService {
     public final DichVuRepo dichVuRepo;
 
@@ -28,7 +29,5 @@ public class DichVuService {
         return dichVuRepo.save(dichVu);
     }
 
-    public void deleteDichVu(String idDichVu){
-        dichVuRepo.deleteDichVu(idDichVu);
-    }
+
 }
