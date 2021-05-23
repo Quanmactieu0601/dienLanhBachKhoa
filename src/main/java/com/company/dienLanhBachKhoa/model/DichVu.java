@@ -11,13 +11,13 @@ public class DichVu {
     private String tenDichVu;
     private String theLoai;
     private String donViTinh;
-    private String donGia;
+    private Long donGia;
 
     public DichVu(){
 
     }
 
-    public DichVu(String idDichVu, String tenDichVu,String theLoai, String donViTinh , String donGia){
+    public DichVu(String idDichVu, String tenDichVu,String theLoai, String donViTinh , Long donGia){
         this.idDichVu = idDichVu;
         this.tenDichVu = tenDichVu;
         this.theLoai = theLoai;
@@ -49,11 +49,11 @@ public class DichVu {
         this.donViTinh = donViTinh;
     }
 
-    public String getDonGia() {
+    public Long getDonGia() {
         return donGia;
     }
 
-    public void setDonGia(String donGia) {
+    public void setDonGia(Long donGia) {
         this.donGia = donGia;
     }
 
