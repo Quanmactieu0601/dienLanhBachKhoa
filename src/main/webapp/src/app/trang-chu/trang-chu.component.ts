@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrangChuComponent implements OnInit {
 
+  dichVus = [
+    {name : 'Vệ sinh điều hoà' , caption : 'Dịch vụ bảo trì vệ sinh điều hoà chuyên nghiệp, uy tín hàng đầu Hà Nội' , imageUrl : './assets/static/images/bao_duong_dieu_hoa.jpg'},
+    {name : 'Mua bán điều hoà' , caption : '' , imageUrl : ''},
+    {name : 'Tháo lắp điều hoà' , caption : '' , imageUrl : ''},
+    {name : 'Tư vấn lắp đặt' , caption : '' , imageUrl : ''},
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
