@@ -26,7 +26,7 @@ public class BaiVietService {
         return baiVietRepo.findAll();
     }
 
-    public BaiViet findBaiVietByIdBaiViet(String idBaiViet){
+    public BaiViet findBaiVietByIdBaiViet(Long idBaiViet){
         return baiVietRepo.findBaiVietByIdBaiViet(idBaiViet).orElseThrow(() -> new BaiVietNotFoundException("Bài viết không tồn tại"));
     }
     public List<BaiViet> findBaiVietByTheLoai(String theLoai){

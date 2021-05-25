@@ -11,14 +11,14 @@ public class SanPhamDaBan {
     @GeneratedValue
     @Column(nullable = false,updatable = false)
     private Long id;
-    private String idHoaDon;
-    private String idSanPham;
+    private Long idHoaDon;
+    private Long idSanPham;
     private int soLuong;
     private Long thanhTien;
 
     public SanPhamDaBan(){}
 
-    public SanPhamDaBan(String idHoaDon, String idSanPham, int soLuong, Long thanhTien) {
+    public SanPhamDaBan(Long idHoaDon, Long idSanPham, int soLuong, Long thanhTien) {
         this.idHoaDon = idHoaDon;
         this.idSanPham = idSanPham;
         this.soLuong = soLuong;
@@ -33,19 +33,19 @@ public class SanPhamDaBan {
         this.id = id;
     }
 
-    public String getIdHoaDon() {
+    public Long getIdHoaDon() {
         return idHoaDon;
     }
 
-    public void setIdHoaDon(String idHoaDon) {
+    public void setIdHoaDon(Long idHoaDon) {
         this.idHoaDon = idHoaDon;
     }
 
-    public String getIdSanPham() {
+    public Long getIdSanPham() {
         return idSanPham;
     }
 
-    public void setIdSanPham(String idSanPham) {
+    public void setIdSanPham(Long idSanPham) {
         this.idSanPham = idSanPham;
     }
 

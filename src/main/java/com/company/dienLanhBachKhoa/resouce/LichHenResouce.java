@@ -25,19 +25,19 @@ public class LichHenResouce {
         return  new ResponseEntity<>(lichHens, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{idKhachHang}")
+    @GetMapping("/find/idKhachHang/{idKhachHang}")
     public ResponseEntity<List<LichHen>> findLichHenByIdKhachHang(@PathVariable("idKhachHang") Long idKhachHang){
         List<LichHen> lichHens = lichHenService.findLichHenByIdKhachHang(idKhachHang);
         return  new ResponseEntity<>(lichHens, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{idDichVu}")
-    public ResponseEntity<List<LichHen>> findLichHenByIdDichVu(@PathVariable("idKhachHang") String idDichVu){
+    @GetMapping("/find/idDichVu/{idDichVu}")
+    public ResponseEntity<List<LichHen>> findLichHenByIdDichVu(@PathVariable("idDichVu") Long idDichVu){
         List<LichHen> lichHens = lichHenService.findLichHenByIdDichVu(idDichVu);
         return  new ResponseEntity<>(lichHens, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{hoanThanh}")
+    @GetMapping("/find/hoanThanh/{hoanThanh}")
     public ResponseEntity<List<LichHen>> findLichHenByIdDichVu(@PathVariable("hoanThanh") boolean hoanThanh){
         List<LichHen> lichHens = lichHenService.findLichHenByHoanThanh(hoanThanh);
         return  new ResponseEntity<>(lichHens, HttpStatus.OK);

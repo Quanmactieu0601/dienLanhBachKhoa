@@ -1,9 +1,8 @@
 package com.company.dienLanhBachKhoa.service;
 
+import com.company.dienLanhBachKhoa.exception.HoaDonNotFoundException;
 import com.company.dienLanhBachKhoa.model.HoaDon;
-import com.company.dienLanhBachKhoa.model.HoatDong;
 import com.company.dienLanhBachKhoa.repo.HoaDonRepo;
-import com.company.dienLanhBachKhoa.repo.HoatDongRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +25,7 @@ public class HoaDonService {
         return hoaDonRepo.findHoaDonByIdKhachHang(idKhachHang);
     }
 
-    public List<HoaDon> findHoaDonByIdNhanVien(String idNhanVien){
+    public List<HoaDon> findHoaDonByIdNhanVien(Long idNhanVien){
         return hoaDonRepo.findHoaDonByIdNhanVien(idNhanVien);
     }
 
@@ -34,8 +33,8 @@ public class HoaDonService {
         return hoaDonRepo.findHoaDonByNgayLap(ngayLap);
     }
 
-    public HoaDon findHoaDonByIdHoaDon(String idHoaDon){
-        return hoaDonRepo.findHoaDonByIdHoaDon(idHoaDon);
+    public HoaDon findHoaDonByIdHoaDon(Long idHoaDon){
+        return hoaDonRepo.findHoaDonByIdHoaDon(idHoaDon).orElseThrow(()-> new HoaDonNotFoundException("không tìm thấy hoá đơn"));
     }
 
     public List<HoaDon> findHoaDonByBiHuy(Boolean biHuy){

@@ -22,11 +22,11 @@ public class HoatDongService {
         return hoatDongRepo.findAll();
     }
 
-    public List<HoatDong> findHoatDongByIdHoaDon(String idHoaDon){
+    public List<HoatDong> findHoatDongByIdHoaDon(Long idHoaDon){
         return hoatDongRepo.findHoatDongByIdHoaDon(idHoaDon);
     }
 
-    public List<HoatDong> findHoatDongByIdDichVu(String idDichvu){
+    public List<HoatDong> findHoatDongByIdDichVu(Long idDichvu){
         return hoatDongRepo.findHoatDongByIdDichVu(idDichvu);
     }
 

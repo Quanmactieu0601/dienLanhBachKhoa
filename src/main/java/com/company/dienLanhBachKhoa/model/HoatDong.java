@@ -11,14 +11,14 @@ public class HoatDong {
     @GeneratedValue
     @Column(nullable = false,updatable = false)
     private Long idHoatDong;
-    private String idHoaDon;
-    private String idDichVu;
+    private Long idHoaDon;
+    private Long idDichVu;
     private Long soLuong;
     private Long thanhTien;
 
     public HoatDong(){}
 
-    public HoatDong(Long idHoatDong, String idHoaDon, String idDichVu, Long soLuong) {
+    public HoatDong(Long idHoatDong, Long idHoaDon, Long idDichVu, Long soLuong) {
         this.idHoatDong = idHoatDong;
         this.idHoaDon = idHoaDon;
         this.idDichVu = idDichVu;
@@ -33,19 +33,19 @@ public class HoatDong {
         this.idHoatDong = idHoatDong;
     }
 
-    public String getIdHoaDon() {
+    public Long getIdHoaDon() {
         return idHoaDon;
     }
 
-    public void setIdHoaDon(String idHoaDon) {
+    public void setIdHoaDon(Long idHoaDon) {
         this.idHoaDon = idHoaDon;
     }
 
-    public String getIdDichVu() {
+    public Long getIdDichVu() {
         return idDichVu;
     }
 
-    public void setIdDichVu(String idDichVu) {
+    public void setIdDichVu(Long idDichVu) {
         this.idDichVu = idDichVu;
     }
 

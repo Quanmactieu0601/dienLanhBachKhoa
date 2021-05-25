@@ -12,18 +12,20 @@ public class SanPham {
     @Column(nullable = false,updatable = false)
     private Long idSanPham;
     private String tenSanPham;
+    private String loaiSanPham; //điều hoà , tủ lạnh , máy giặt
     private String model;
-    private String loaiMay;
-    private String kieuMay;
-    private String congSuat;
-    private String loaiGas;
+    private String loaiMay;     //Đh : treo tường, cây điều hoà, âm trần,..| máy giặt : cửa đứng , cửa ngang  | tủ lạnh: tủ trực tiếp , bình thường,
+    private boolean isInverter; //    inverter(có | không)
+    private String kieuMay;     //(Đh : 1 chiều , 2 chiều | còn lại null)
+    private String congSuat;    //ĐH : 9000btu , 12000btu,..| MG : 7kg,10kg ,.. | tủ lạnh :(dung tích) 216 lít,..
+    private String loaiGas;     //ĐH : R32, R22 , R410 | còn lại null
     private String xuatXu;
     private int baoHanh;
     private Long giaTien;
 
     public SanPham(){}
 
-    public SanPham(Long idSanPham, String tenSanPham,String model, String loaiMay, String kieuMay, String congSuat, String loaiGas, String xuatXu, int baoHanh, Long giaTien) {
+    public SanPham(Long idSanPham, String tenSanPham, String loaiSanPham,String model, String loaiMay, String kieuMay,boolean isInverter, String congSuat, String loaiGas, String xuatXu, int baoHanh, Long giaTien) {
         this.idSanPham = idSanPham;
         this.tenSanPham = tenSanPham;
         this.model = model;
@@ -34,6 +36,8 @@ public class SanPham {
         this.xuatXu = xuatXu;
         this.baoHanh = baoHanh;
         this.giaTien = giaTien;
+        this.isInverter = isInverter;
+        this.loaiSanPham = loaiSanPham;
     }
 
     public Long getIdSanPham() {
@@ -116,13 +120,31 @@ public class SanPham {
         this.model = model;
     }
 
+    public String getLoaiSanPham() {
+        return loaiSanPham;
+    }
+
+    public void setLoaiSanPham(String loaiSanPham) {
+        this.loaiSanPham = loaiSanPham;
+    }
+
+    public boolean isInverter() {
+        return isInverter;
+    }
+
+    public void setInverter(boolean inverter) {
+        isInverter = inverter;
+    }
+
     public String toString(){
         return "SanPham{" +
                 "idSanPham='" + idSanPham +'\'' +
                 "tenSanPham='" + tenSanPham +'\'' +
+                "loaiSanPham='" + loaiSanPham + '\''+
                 "model='" + model +'\''+
                 "loaiMay='" + loaiMay + '\'' +
                 "kieuMay='" + kieuMay +'\'' +
+                "isInverter='" + isInverter + '\''+
                 "congSuat='" + congSuat +'\'' +
                 "loaiGas='" + loaiGas + '\'' +
                 "xuatXu='" + xuatXu + '\'' +

@@ -27,14 +27,15 @@
   <div class="col-lg-10">
     <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link " href="#">Trang chủ </a>
-          <a class="nav-item nav-link" href="#">Giới thiệu</a>
-          <a class="nav-item nav-link" href="#">Dịch vụ</a>
-          <a class="nav-item nav-link " href="#">Bảng giá</a>
-          <a class="nav-item nav-link " href="#">Nhân viên kỹ thuật</a>
-          <a class="nav-item nav-link " href="#">Lịch hẹn</a>
-          <a class="nav-item nav-link " href="#">Liên hệ</a>
+        <div class="navbar-nav fs-100">
+          <a class="nav-item nav-link " routerLink="/trang-chu" >Trang chủ </a>
+          <a class="nav-item nav-link" routerLink="/gioi-thieu">Giới thiệu</a>
+          <a class="nav-item nav-link" routerLink="/san-pham">Sản phẩm</a>
+          <a class="nav-item nav-link" routerLink="/dich-vu">Dịch vụ</a>
+          <a class="nav-item nav-link " routerLink="/bang-gia">Bảng giá</a>
+          <a class="nav-item nav-link " routerLink="/nhan-vien-ky-thuat">Nhân viên kỹ thuật</a>
+          <a class="nav-item nav-link " routerLink="/lich-hen">Lịch hẹn</a>
+          <a class="nav-item nav-link " routerLink="/lien-he">Liên hệ</a>
         </div>
       </div>
     </nav>
@@ -42,7 +43,6 @@
 
 </div>
 <br><br>
-<app-trang-chu></app-trang-chu>
 <router-outlet></router-outlet>
 <br><br>
 <!--row 4 : thương hiệu nổi bật-->
@@ -154,6 +154,7 @@
           </svg>
           &nbsp;&nbsp;&nbsp;&nbsp;
           Email : &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="tel:0964.155.624" value="+84936155155" target="_blank">0936.155.155</a>
         </p>
 
         <br><br><br>

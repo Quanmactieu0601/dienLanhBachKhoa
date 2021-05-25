@@ -24,7 +24,7 @@ public class SanPhamDaBanResouce {
     }
 
     @GetMapping("/find/{idHoaDon}")
-    public ResponseEntity<List<SanPhamDaBan>> findSanPhamDaBanByIdHoaDon(@PathVariable("idHoaDon") String idHoaDon){
+    public ResponseEntity<List<SanPhamDaBan>> findSanPhamDaBanByIdHoaDon(@PathVariable("idHoaDon") Long idHoaDon){
         List<SanPhamDaBan> sanPhamDaBans = sanPhamDaBanService.findSanPhamDaBanByIdHoaDon(idHoaDon);
         return new ResponseEntity<>(sanPhamDaBans, HttpStatus.OK);
     }

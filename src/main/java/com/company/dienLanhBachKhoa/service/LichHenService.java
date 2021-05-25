@@ -32,7 +32,7 @@ public class LichHenService {
         return lichHenRepo.findLichHenByIdKhachHang(id);
     }
 
-    public List<LichHen> findLichHenByIdDichVu(String idDichVu){
+    public List<LichHen> findLichHenByIdDichVu(Long idDichVu){
         return lichHenRepo.findLichHenByIdDichVu(idDichVu);
     }
 
@@ -40,7 +40,7 @@ public class LichHenService {
         return lichHenRepo.findLichHenByHoanThanh(hoanThanh);
     }
 
-    public LichHen findLichHenByIdLichHen(String idLichHen){
+    public LichHen findLichHenByIdLichHen(Long idLichHen){
         return lichHenRepo.findLichHenByIdLichHen(idLichHen).orElseThrow(() -> new LichHenNotFoundException("Lich hen không tồn tại"));
     }
 

@@ -1,5 +1,6 @@
 package com.company.dienLanhBachKhoa.service;
 
+import com.company.dienLanhBachKhoa.exception.DichVuNotFoundException;
 import com.company.dienLanhBachKhoa.model.DichVu;
 import com.company.dienLanhBachKhoa.repo.DichVuRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ public class DichVuService {
     public List<DichVu> findDichVuByTheLoai(String theLoai){
         return dichVuRepo.findDichVuByTheLoai(theLoai);
     }
+
+    public DichVu findDichVuByIdDichVu(Long idDichVu) {return dichVuRepo.findDichVuByIdDichVu(idDichVu).orElseThrow(()-> new DichVuNotFoundException("khong tim thấy dịch vụ"));}
 
     public DichVu addDichVu(DichVu dichVu){
         return dichVuRepo.save(dichVu);

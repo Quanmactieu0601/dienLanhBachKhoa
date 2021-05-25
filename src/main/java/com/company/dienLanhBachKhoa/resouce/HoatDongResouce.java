@@ -23,19 +23,19 @@ public class HoatDongResouce {
         return new ResponseEntity<>(hoatDongs, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{idHoaDon}")
-    public ResponseEntity<List<HoatDong>> findHoatDongByIdHoaDon(@PathVariable("idHoaDon") String idHoaDon){
+    @GetMapping("/find/idHoaDon/{idHoaDon}")
+    public ResponseEntity<List<HoatDong>> findHoatDongByIdHoaDon(@PathVariable("idHoaDon") Long idHoaDon){
         List<HoatDong> hoatDongs = hoatDongService.findHoatDongByIdHoaDon(idHoaDon);
         return new ResponseEntity<>(hoatDongs, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{idDichvu}")
-    public ResponseEntity<List<HoatDong>> findHoatDongByIdDichVu(@PathVariable("idDichvu") String idDichvu){
+    @GetMapping("/find/idDichvu/{idDichvu}")
+    public ResponseEntity<List<HoatDong>> findHoatDongByIdDichVu(@PathVariable("idDichvu") Long idDichvu){
         List<HoatDong> hoatDongs = hoatDongService.findHoatDongByIdDichVu(idDichvu);
         return new ResponseEntity<>(hoatDongs, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{idHoatDong}")
+    @GetMapping("/find/idHoatDong/{idHoatDong}")
     public ResponseEntity<HoatDong> findHoatDongByidHoatDong(@PathVariable("idHoatDong") Long idHoatDong){
         HoatDong hoatDong = hoatDongService.findHoatDongByidHoatDong(idHoatDong);
         return new ResponseEntity<>(hoatDong, HttpStatus.OK);
@@ -47,7 +47,7 @@ public class HoatDongResouce {
         return new ResponseEntity<>(newHoatDong, HttpStatus.CREATED);
     }
 
-    @PutMapping("/add")
+    @PutMapping("/update")
     public ResponseEntity<HoatDong> updateHoatDong(HoatDong hoatDong){
         HoatDong updateHoatDong = hoatDongService.updateHoatDong(hoatDong);
         return new ResponseEntity<>(updateHoatDong, HttpStatus.CREATED);

@@ -14,10 +14,12 @@ import { BangGiaComponent } from './bang-gia/bang-gia.component';
 import { LenLichHenComponent } from './len-lich-hen/len-lich-hen.component';
 import { LienHeComponent } from './lien-he/lien-he.component';
 import { ChiTietBaiVietComponent } from './chi-tiet-bai-viet/chi-tiet-bai-viet.component';
-import { DanhSachDichVuComponent } from './danh-sach-dich-vu/danh-sach-dich-vu.component';
+
 import { ChiTietSanPhamComponent } from './chi-tiet-san-pham/chi-tiet-san-pham.component';
 import { DanhSachSanPhamComponent } from './danh-sach-san-pham/danh-sach-san-pham.component';
 import { LichHenComponent } from './lich-hen/lich-hen.component';
+import {DanhSachSanPhamService} from "./danh-sach-san-pham/danh-sach-san-pham.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { LichHenComponent } from './lich-hen/lich-hen.component';
     LenLichHenComponent,
     LienHeComponent,
     ChiTietBaiVietComponent,
-    DanhSachDichVuComponent,
+
     ChiTietSanPhamComponent,
     DanhSachSanPhamComponent,
     LichHenComponent
@@ -40,9 +42,10 @@ import { LichHenComponent } from './lich-hen/lich-hen.component';
         AppRoutingModule,
         NgbCarouselModule,
         FormsModule,
-        NgImageSliderModule
+        NgImageSliderModule,
+        HttpClientModule
     ],
-  providers: [],
+  providers: [DanhSachSanPhamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

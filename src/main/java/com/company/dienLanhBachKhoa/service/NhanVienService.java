@@ -22,7 +22,7 @@ public class NhanVienService {
         return nhanVienRepo.findAll();
     }
 
-    public NhanVien findNhanVienByIdNhanVien(String idNhanVien){
+    public NhanVien findNhanVienByIdNhanVien(Long idNhanVien){
         return nhanVienRepo.findNhanVienByIdNhanVien(idNhanVien).orElseThrow( () -> new NhanVienNotFoundException("Not found nhanVien with id "+idNhanVien));
     }
 
@@ -35,7 +35,7 @@ public class NhanVienService {
     }
 
     @Transactional
-    public void deleteNhanVienByIdNhanVien(String idNhanVien){
+    public void deleteNhanVienByIdNhanVien(Long idNhanVien){
         nhanVienRepo.deleteNhanVienByIdNhanVien(idNhanVien);
     }
 

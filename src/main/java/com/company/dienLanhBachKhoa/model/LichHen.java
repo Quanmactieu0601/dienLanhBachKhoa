@@ -8,20 +8,20 @@ public class LichHen {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     private Long idLichHen;
-    private String idDichVu;
+    private Long idDichVu;
     private Long idKhachHang;
     private String fromTime;
     private String toTime;
     private String tinhTrangMay;
     @Column(nullable = false, updatable = false)
-    private String idNhanVien;
+    private Long idNhanVien;
     private boolean hoanThanh;
-    private String idHoaDon;
+    private Long idHoaDon;
     private String ghiChu;
 
     public LichHen(){}
 
-    public LichHen(Long idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay){
+    public LichHen(Long idLichHen, Long idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay){
         this.idLichHen = idLichHen;
         this.idDichVu = idDichVu;
         this.idKhachHang = idKhachHang;
@@ -33,7 +33,7 @@ public class LichHen {
         this.idHoaDon = null;
         this.ghiChu = null;
     }
-    public LichHen(Long idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, String idNhanVien){
+    public LichHen(Long idLichHen, Long idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, Long idNhanVien){
         this.idLichHen = idLichHen;
         this.idDichVu = idDichVu;
         this.idKhachHang = idKhachHang;
@@ -46,7 +46,7 @@ public class LichHen {
         this.ghiChu = null;
     }
 
-    public LichHen(Long idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, String idNhanVien,boolean hoanThanh,String idHoaDon, String ghiChu){
+    public LichHen(Long idLichHen, Long idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, Long idNhanVien,boolean hoanThanh,Long idHoaDon, String ghiChu){
         this.idLichHen = idLichHen;
         this.idDichVu = idDichVu;
         this.idKhachHang = idKhachHang;
@@ -68,11 +68,11 @@ public class LichHen {
         this.idLichHen = idLichHen;
     }
 
-    public String getIDDichVu() {
+    public Long getIDDichVu() {
         return idDichVu;
     }
 
-    public void setTenDichVu(String idDichVu) {
+    public void setTenDichVu(Long idDichVu) {
         this.idDichVu = idDichVu;
     }
 
@@ -106,6 +106,46 @@ public class LichHen {
 
     public void setTinhTrangMay(String tinhTrangMay) {
         this.tinhTrangMay = tinhTrangMay;
+    }
+
+    public Long getIdDichVu() {
+        return idDichVu;
+    }
+
+    public void setIdDichVu(Long idDichVu) {
+        this.idDichVu = idDichVu;
+    }
+
+    public Long getIdNhanVien() {
+        return idNhanVien;
+    }
+
+    public void setIdNhanVien(Long idNhanVien) {
+        this.idNhanVien = idNhanVien;
+    }
+
+    public boolean isHoanThanh() {
+        return hoanThanh;
+    }
+
+    public void setHoanThanh(boolean hoanThanh) {
+        this.hoanThanh = hoanThanh;
+    }
+
+    public Long getIdHoaDon() {
+        return idHoaDon;
+    }
+
+    public void setIdHoaDon(Long idHoaDon) {
+        this.idHoaDon = idHoaDon;
+    }
+
+    public String getGhiChu() {
+        return ghiChu;
+    }
+
+    public void setGhiChu(String ghiChu) {
+        this.ghiChu = ghiChu;
     }
 
     public String toString(){

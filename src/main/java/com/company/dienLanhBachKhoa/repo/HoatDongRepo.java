@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface HoatDongRepo extends JpaRepository<HoatDong,Long> {
-    List<HoatDong> findHoatDongByIdHoaDon(String idHoaDon);
+    List<HoatDong> findHoatDongByIdHoaDon(Long idHoaDon);
 
-    List<HoatDong> findHoatDongByIdDichVu(String idDichvu);
+    List<HoatDong> findHoatDongByIdDichVu(Long idDichvu);
 
     Optional<HoatDong> findHoatDongByIdHoatDong(Long idHoatDong);
 

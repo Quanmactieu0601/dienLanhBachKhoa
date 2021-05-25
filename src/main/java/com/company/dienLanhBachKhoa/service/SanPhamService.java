@@ -37,7 +37,10 @@ public class SanPhamService {
     public List<SanPham> findSanPhamByXuatXu(String xuatXu){
         return sanPhamRepo.findSanPhamByXuatXu(xuatXu);
     }
-    public SanPham findSanPhamByIdSanPham(String idSanPham){
+    public List<SanPham> findSanPhamByLoaiSanPham(String loaiSanPham){
+        return sanPhamRepo.findSanPhamByLoaiSanPham(loaiSanPham);
+    }
+    public SanPham findSanPhamByIdSanPham(Long idSanPham){
         return sanPhamRepo.findSanPhamByIdSanPham(idSanPham).orElseThrow(()-> new SanPhamNotFoundException("Khong tim thay san pham"));
     }
 

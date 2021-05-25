@@ -13,9 +13,9 @@ public interface LichHenRepo extends JpaRepository<LichHen,String> {
 
     void deleteLichHenByIdLichHen(String idLichHen);
 
-    List<LichHen> findLichHenByIdDichVu(String idDichVu);
+    List<LichHen> findLichHenByIdDichVu(Long idDichVu);
 
     List<LichHen> findLichHenByHoanThanh(boolean hoanThanh);
 
-    Optional<LichHen> findLichHenByIdLichHen(String idLichHen);
+    Optional<LichHen> findLichHenByIdLichHen(Long idLichHen);
 }

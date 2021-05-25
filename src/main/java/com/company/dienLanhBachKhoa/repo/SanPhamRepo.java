@@ -17,5 +17,7 @@ public interface SanPhamRepo extends JpaRepository<SanPham,String> {
 
     List<SanPham> findSanPhamByXuatXu(String xuatXu);
 
-    Optional<SanPham> findSanPhamByIdSanPham(String idSanPham);
+    Optional<SanPham> findSanPhamByIdSanPham(Long idSanPham);
+
+    List<SanPham> findSanPhamByLoaiSanPham(String loaiSanPham);
 }

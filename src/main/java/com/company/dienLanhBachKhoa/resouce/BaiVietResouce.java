@@ -25,14 +25,14 @@ public class BaiVietResouce {
         return new ResponseEntity<>(baiViets , HttpStatus.OK);
     }
 
-    @GetMapping("/find/{theLoai}")
+    @GetMapping("/find/theLoai/{theLoai}")
     public ResponseEntity<List<BaiViet>> getBaiVietByTheLoai(@PathVariable("theLoai") String theLoai){
         List<BaiViet> baiViets = baiVietService.findBaiVietByTheLoai(theLoai);
         return new ResponseEntity<>(baiViets , HttpStatus.OK);
     }
     
-    @GetMapping("find/{idBaiViet}")
-    public ResponseEntity<BaiViet> getBaiVietByIdBaiViet(@PathVariable("idBaiViet") String idBaiViet){
+    @GetMapping("/find/idBaiViet/{idBaiViet}")
+    public ResponseEntity<BaiViet> getBaiVietByIdBaiViet(@PathVariable("idBaiViet") Long idBaiViet){
         BaiViet baiViet = baiVietService.findBaiVietByIdBaiViet(idBaiViet);
         return new ResponseEntity<>(baiViet,HttpStatus.OK);                
     }

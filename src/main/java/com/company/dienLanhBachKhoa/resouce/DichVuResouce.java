@@ -25,10 +25,16 @@ public class DichVuResouce {
         return new ResponseEntity<>(dichVus , HttpStatus.OK);
     }
 
-    @GetMapping("/find/{theLoai}")
+    @GetMapping("/find/theLoai/{theLoai}")
     public ResponseEntity<List<DichVu>> findDichVuByTheLoai(@PathVariable("theLoai") String theLoai){
         List<DichVu> dichVus = dichVuService.findDichVuByTheLoai(theLoai);
         return new ResponseEntity<>(dichVus , HttpStatus.OK);
+    }
+
+    @GetMapping("/find/idDichVu/{idDichVu}")
+    public ResponseEntity<DichVu> findDichVuByIdDichVu(@PathVariable("idDichVu") Long idDichVu){
+        DichVu newDichVu = dichVuService.findDichVuByIdDichVu(idDichVu);
+        return new ResponseEntity<>(newDichVu,HttpStatus.OK);
     }
 
     @PostMapping("/add")

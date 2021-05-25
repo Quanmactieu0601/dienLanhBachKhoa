@@ -22,7 +22,7 @@ public class SanPhamDaBanService {
         return sanPhamDaBanRepo.findAll();
     }
 
-    public List<SanPhamDaBan> findSanPhamDaBanByIdHoaDon(String idHoaDon){
+    public List<SanPhamDaBan> findSanPhamDaBanByIdHoaDon(Long idHoaDon){
         return sanPhamDaBanRepo.findSanPhamDaBanByIdHoaDon(idHoaDon);
     }
 

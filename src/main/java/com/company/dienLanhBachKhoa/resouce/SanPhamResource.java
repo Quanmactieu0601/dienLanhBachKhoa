@@ -23,37 +23,44 @@ public class SanPhamResource {
         return new ResponseEntity<>(sanPhams, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{congSuat}")
+    @GetMapping("/find/congSuat/{congSuat}")
     public ResponseEntity<List<SanPham>> findSanPhamByCongSuat(@PathVariable("congSuat") String congSuat){
         List<SanPham> sanPhams = sanPhamService.findSanPhamByCongSuat(congSuat);
         return new ResponseEntity<>(sanPhams, HttpStatus.OK);
     }
-    @GetMapping("/find/{loaiMay}")
+
+    @GetMapping("/find/loaiSanPham/{loaiSanPham}")
+    public ResponseEntity<List<SanPham>> findSanPhamByLoaiSanPham(@PathVariable("loaiSanPham") String loaiSanPham){
+        List<SanPham> sanPhams = sanPhamService.findSanPhamByLoaiSanPham(loaiSanPham);
+        return new ResponseEntity<>(sanPhams, HttpStatus.OK);
+    }
+
+    @GetMapping("/find/loaiMay/{loaiMay}")
     public ResponseEntity<List<SanPham>> findSanPhamByLoaiMay(@PathVariable("loaiMay") String loaiMay){
         List<SanPham> sanPhams = sanPhamService.findSanPhamByLoaiMay(loaiMay);
         return new ResponseEntity<>(sanPhams, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{kieuMay}")
+    @GetMapping("/find/kieuMay/{kieuMay}")
     public ResponseEntity<List<SanPham>> findSanPhamByKieuMay(@PathVariable("kieuMay") String kieuMay){
         List<SanPham> sanPhams = sanPhamService.findSanPhamByKieuMay(kieuMay);
         return new ResponseEntity<>(sanPhams, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{loaiGas}")
+    @GetMapping("/find/loaiGas/{loaiGas}")
     public ResponseEntity<List<SanPham>> findSanPhamByLoaiGas(@PathVariable("loaiGas") String loaiGas){
         List<SanPham> sanPhams = sanPhamService.findSanPhamByLoaiGas(loaiGas);
         return new ResponseEntity<>(sanPhams, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{xuatXu}")
+    @GetMapping("/find/xuatXu/{xuatXu}")
     public ResponseEntity<List<SanPham>> findSanPhamByXuatXu(@PathVariable("xuatXu") String xuatXu){
         List<SanPham> sanPhams = sanPhamService.findSanPhamByXuatXu(xuatXu);
         return new ResponseEntity<>(sanPhams, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{idSanPham}")
-    public ResponseEntity<SanPham> findSanPhamByIdSanPham(@PathVariable("idSanPham") String idSanPham){
+    @GetMapping("/find/idSanPham/{idSanPham}")
+    public ResponseEntity<SanPham> findSanPhamByIdSanPham(@PathVariable("idSanPham") Long idSanPham){
         SanPham sanPham = sanPhamService.findSanPhamByIdSanPham(idSanPham);
         return new ResponseEntity<>(sanPham, HttpStatus.OK);
     }

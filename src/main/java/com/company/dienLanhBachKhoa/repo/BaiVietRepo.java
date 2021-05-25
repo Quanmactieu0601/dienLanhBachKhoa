@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface BaiVietRepo  extends JpaRepository< BaiViet , String> {
 
-     Optional<BaiViet> findBaiVietByIdBaiViet(String idBaiViet);
+     Optional<BaiViet> findBaiVietByIdBaiViet(Long idBaiViet);
 
     void deleteBaiVietByIdBaiViet(String idBaiViet);
 
