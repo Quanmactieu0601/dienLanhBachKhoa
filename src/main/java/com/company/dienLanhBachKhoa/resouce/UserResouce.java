@@ -33,7 +33,7 @@ public class UserResouce {
     @PostMapping("/add")
     public ResponseEntity<User> addUser(@RequestBody User user){
         User newUser = userService.addUser(user);
-        return new ResponseEntity<>(user , HttpStatus.CREATED);
+        return new ResponseEntity<>(newUser , HttpStatus.CREATED);
     }
 
     @PutMapping("/update")

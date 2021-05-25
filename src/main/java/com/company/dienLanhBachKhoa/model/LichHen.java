@@ -7,7 +7,7 @@ public class LichHen {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    private String idLichHen;
+    private Long idLichHen;
     private String idDichVu;
     private Long idKhachHang;
     private String fromTime;
@@ -21,7 +21,7 @@ public class LichHen {
 
     public LichHen(){}
 
-    public LichHen(String idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay){
+    public LichHen(Long idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay){
         this.idLichHen = idLichHen;
         this.idDichVu = idDichVu;
         this.idKhachHang = idKhachHang;
@@ -33,7 +33,7 @@ public class LichHen {
         this.idHoaDon = null;
         this.ghiChu = null;
     }
-    public LichHen(String idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, String idNhanVien){
+    public LichHen(Long idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, String idNhanVien){
         this.idLichHen = idLichHen;
         this.idDichVu = idDichVu;
         this.idKhachHang = idKhachHang;
@@ -46,7 +46,7 @@ public class LichHen {
         this.ghiChu = null;
     }
 
-    public LichHen(String idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, String idNhanVien,boolean hoanThanh,String idHoaDon, String ghiChu){
+    public LichHen(Long idLichHen, String idDichVu, Long idKhachHang, String fromTime, String toTime,String tinhTrangMay, String idNhanVien,boolean hoanThanh,String idHoaDon, String ghiChu){
         this.idLichHen = idLichHen;
         this.idDichVu = idDichVu;
         this.idKhachHang = idKhachHang;
@@ -60,11 +60,11 @@ public class LichHen {
     }
 
 
-    public String getIdLichHen() {
+    public Long getIdLichHen() {
         return idLichHen;
     }
 
-    public void setIdLichHen(String idLichHen) {
+    public void setIdLichHen(Long idLichHen) {
         this.idLichHen = idLichHen;
     }
 

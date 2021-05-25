@@ -1,30 +1,59 @@
+<!--Dịch vụ điện lạnh-->
 <div class="row">
   <div class="col-lg-1"></div>
   <div class="col-lg-10 ">
     <div class="tag">Dịch vụ điện lạnh</div>
     <br>
-    <div class="col-lg-6">
-      <div>
-        <img src="./assets/static/images/sua_chua_dieu_hoa.jpg" alt="sửa điều hoà">
-        <br>
-        <h1>Sửa điều hoà</h1>
-        <br>
-        <p style="padding-right: 15%">
-          Sửa chữa máy lạnh tại nhà của Điện Lạnh Bách Khoa luôn đảm bảo giá rẻ hơn thị trường,
-          sự chuyên nghiệp của đội ngũ nhân viên nhiều năm kinh nghiệm.
-          Ngoài ra chúng tôi còn có thay block máy lạnh và sửa board máy lạnh.
-        </p>
-      </div>
-
-    </div>
-    <div class="col-lg-6">
-        <div *ngFor="let dichVu of dichVus">
-          <div>
-            <img class="dich_vu" [src]="dichVu.imageUrl" [alt]="dichVu.name">
-          </div>
-          <
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <img src="./assets/static/images/sua_chua_dieu_hoa.jpg" alt="sửa điều hoà">
+          <br>
+          <h1>Sửa điều hoà</h1>
+          <br>
+          <p style="padding-right: 15%">
+            Sửa chữa máy lạnh tại nhà của Điện Lạnh Bách Khoa luôn đảm bảo giá rẻ hơn thị trường,
+            sự chuyên nghiệp của đội ngũ nhân viên nhiều năm kinh nghiệm.
+            Ngoài ra chúng tôi còn có thay block máy lạnh và sửa board máy lạnh.
+          </p>
         </div>
 
+      </div>
+      <div class="col-lg-6">
+          <div class="row" *ngFor="let dichVu of dichVus">
+            <div class="col-lg-4" >
+              <img class="dich_vu" [src]="dichVu.imageUrl" [alt]="dichVu.name">
+              <br>
+             <br>
+
+            </div>
+            <div class="col-lg-8">
+              <h4>{{dichVu.name}}</h4>
+              <br>
+              <p>{{dichVu.caption}}</p>
+              <br>
+            </div>
+            <hr>
+          </div>
+
+      </div>
     </div>
   </div>
 </div>
+
+<!--Sản phẩm tiêu biểu-->
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <div class="tag">Sản phẩm tiêu biểu</div>
+    <br>
+    <div class="row" *ngFor="let sanPham of sanPhams">
+      <div class="col-lg-3">
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+

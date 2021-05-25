@@ -10,7 +10,7 @@ public class NhanVien {
     @Id
     @GeneratedValue
     @Column(nullable = false,updatable = false)
-    private String idNhanVien;
+    private Long idNhanVien;
     private String tenNhanVien;
     private String ngaySinh;
     private boolean gioiTinh;
@@ -22,7 +22,7 @@ public class NhanVien {
 
     }
 
-    public NhanVien(String idNhanVien, String tenNhanVien, String ngaySinh, boolean gioiTinh, Long kinhNghiem, String soThich){
+    public NhanVien(Long idNhanVien, String tenNhanVien, String ngaySinh, boolean gioiTinh, Long kinhNghiem, String soThich){
         this.idNhanVien = idNhanVien;
         this.tenNhanVien = tenNhanVien;
         this.ngaySinh = ngaySinh;
@@ -31,11 +31,11 @@ public class NhanVien {
         this.soThich = soThich;
     }
 
-    public String getIdNhanVien() {
+    public Long getIdNhanVien() {
         return idNhanVien;
     }
 
-    public void setIdNhanVien(String idNhanVien) {
+    public void setIdNhanVien(Long idNhanVien) {
         this.idNhanVien = idNhanVien;
     }
 

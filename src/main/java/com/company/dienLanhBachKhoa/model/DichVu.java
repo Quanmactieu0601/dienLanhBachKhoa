@@ -7,7 +7,7 @@ public class DichVu {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    private String idDichVu;
+    private Long idDichVu;
     private String tenDichVu;
     private String theLoai;
     private String donViTinh;
@@ -17,7 +17,7 @@ public class DichVu {
 
     }
 
-    public DichVu(String idDichVu, String tenDichVu,String theLoai, String donViTinh , Long donGia){
+    public DichVu(Long idDichVu, String tenDichVu,String theLoai, String donViTinh , Long donGia){
         this.idDichVu = idDichVu;
         this.tenDichVu = tenDichVu;
         this.theLoai = theLoai;
@@ -25,11 +25,11 @@ public class DichVu {
         this.donGia = donGia;
     }
 
-    public String getIdDichVu() {
+    public Long getIdDichVu() {
         return idDichVu;
     }
 
-    public void setIdDichVu(String idDichVu) {
+    public void setIdDichVu(Long idDichVu) {
         this.idDichVu = idDichVu;
     }
 

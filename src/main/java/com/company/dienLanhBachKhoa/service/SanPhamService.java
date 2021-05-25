@@ -40,4 +40,8 @@ public class SanPhamService {
     public SanPham findSanPhamByIdSanPham(String idSanPham){
         return sanPhamRepo.findSanPhamByIdSanPham(idSanPham).orElseThrow(()-> new SanPhamNotFoundException("Khong tim thay san pham"));
     }
+
+    public SanPham addSanPham(SanPham sanPham){
+        return sanPhamRepo.save(sanPham);
+    }
 }

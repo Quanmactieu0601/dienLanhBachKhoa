@@ -10,7 +10,7 @@ public class SanPham {
     @Id
     @GeneratedValue
     @Column(nullable = false,updatable = false)
-    private String idSanPham;
+    private Long idSanPham;
     private String tenSanPham;
     private String model;
     private String loaiMay;
@@ -23,7 +23,7 @@ public class SanPham {
 
     public SanPham(){}
 
-    public SanPham(String idSanPham, String tenSanPham,String model, String loaiMay, String kieuMay, String congSuat, String loaiGas, String xuatXu, int baoHanh, Long giaTien) {
+    public SanPham(Long idSanPham, String tenSanPham,String model, String loaiMay, String kieuMay, String congSuat, String loaiGas, String xuatXu, int baoHanh, Long giaTien) {
         this.idSanPham = idSanPham;
         this.tenSanPham = tenSanPham;
         this.model = model;
@@ -36,11 +36,11 @@ public class SanPham {
         this.giaTien = giaTien;
     }
 
-    public String getIdSanPham() {
+    public Long getIdSanPham() {
         return idSanPham;
     }
 
-    public void setIdSanPham(String idSanPham) {
+    public void setIdSanPham(Long idSanPham) {
         this.idSanPham = idSanPham;
     }
 

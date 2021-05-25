@@ -11,7 +11,7 @@ public class HoaDon {
     @Id
     @GeneratedValue
     @Column(nullable = false,updatable = false)
-    private String idHoaDon;
+    private Long idHoaDon;
     private Long idKhachHang;
     private String idNhanVien;
     private String idLichHen;
@@ -21,7 +21,7 @@ public class HoaDon {
 
     public HoaDon(){}
 
-    public HoaDon(String idHoaDon, Long idKhachHang, String idNhanVien, String idLichHen, String ngayLap, Long tongTien) {
+    public HoaDon(Long idHoaDon, Long idKhachHang, String idNhanVien, String idLichHen, String ngayLap, Long tongTien) {
         this.idHoaDon = idHoaDon;
         this.idKhachHang = idKhachHang;
         this.idNhanVien = idNhanVien;
@@ -31,7 +31,7 @@ public class HoaDon {
         this.biHuy = false;
     }
 
-    public HoaDon(String idHoaDon, Long idKhachHang, String idNhanVien, String idLichHen, String ngayLap, Long tongTien , boolean biHuy) {
+    public HoaDon(Long idHoaDon, Long idKhachHang, String idNhanVien, String idLichHen, String ngayLap, Long tongTien , boolean biHuy) {
         this.idHoaDon = idHoaDon;
         this.idKhachHang = idKhachHang;
         this.idNhanVien = idNhanVien;
@@ -41,11 +41,11 @@ public class HoaDon {
         this.biHuy = biHuy;
     }
 
-    public String getIdHoaDon() {
+    public Long getIdHoaDon() {
         return idHoaDon;
     }
 
-    public void setIdHoaDon(String idHoaDon) {
+    public void setIdHoaDon(Long idHoaDon) {
         this.idHoaDon = idHoaDon;
     }
 
