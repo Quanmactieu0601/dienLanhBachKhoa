@@ -1,1 +1,62 @@
-<p>bang-gia works!</p>
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <ol class="breadcrumb in-page">
+      <li class="breadcrumb-item"><a href="./"><span>Trang chủ</span></a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        <span>Dịch vụ</span>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <h2>Bảng giá</h2>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <h2></h2>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <table style="width:100%">
+      <tr>
+        <th>STT</th>
+        <th>Tên dich vụ</th>
+        <th >Thể loại</th>
+        <th>Đơn vị tính</th>
+        <th>Đơn giá</th>
+      </tr>
+      <tr *ngFor="let dichVu of dichVus; index as i">
+        <td style="text-align: center">{{i+1}}</td>
+        <td>{{dichVu.tenDichVu}}</td>
+        <td style="text-align: center">{{dichVu.theLoai}}</td>
+        <td style="text-align: center">{{dichVu.donViTinh}}</td>
+        <td style="text-align: center">{{dichVu.donGia}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

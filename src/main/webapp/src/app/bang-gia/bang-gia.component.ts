@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {DichVu} from "./dich-vu";
+import {DichVuService} from "./dich-vu.service";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-bang-gia',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bang-gia.component.css']
 })
 export class BangGiaComponent implements OnInit {
+  public dichVus : DichVu[];
+  constructor(private dichVuService : DichVuService) { }
 
-  constructor() { }
+  public getAllDichVu() : void{
+    this.dichVuService.getDichVus().subscribe(
+      (respone: DichVu[]) => {
+        this.dichVus = respone;
+      },
+      (error:HttpErrorResponse) => {
+        alert(error.message);
+      }
 
+    )
+  }
   ngOnInit(): void {
+    this.getAllDichVu();
   }
 
 }
